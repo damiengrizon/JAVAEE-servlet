@@ -1,3 +1,4 @@
+
 package com.octest.servlets;
 
 import java.io.IOException;
@@ -22,11 +23,9 @@ public class Test extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
-		response.setCharacterEncoding("UTF-8");
+		request.setAttribute("heure", "soir");
 		
-		PrintWriter out = response.getWriter();
-		out.println("bonjour");
+		this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
 	}
 
 
