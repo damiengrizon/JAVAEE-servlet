@@ -7,6 +7,7 @@
 </head>
 <body>
 <p>Bonjour à vous !</p>
+<%@ include file="menu.jsp" %>
 <p>
     <%
         String heure = (String) request.getAttribute("heure");
